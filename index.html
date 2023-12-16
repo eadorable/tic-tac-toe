@@ -3,14 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIdRMr5UgByhZgM2M2U7c1MT5U8AiFObo" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <title>Tic-Tac-Toe</title>
 </head>
-<body>
-  <div id="status">Next player: X</div>
-  <div id="board" class="board">
-    <!-- Game board will be dynamically generated here -->
+<body class="bg-light">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="mb-4">Tic-Tac-Toe</h1>
+        <div id="status" class="mb-3 div--text">Next player: X</div>
+        <div class="div--board">
+          <div id="board" class="board">
+            <!-- Game board will be dynamically generated here -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

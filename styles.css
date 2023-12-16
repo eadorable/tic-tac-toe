@@ -1,11 +1,44 @@
+button {
+  font-size: 24px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.div--board{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 230px;
+  margin:5px;
+}
+
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
+  grid-template-columns: repeat(3, 75px);
   gap: 4px;
 }
 
-button {
-  font-size: 24px;
-  width: 100px;
-  height: 100px;
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.div--text{
+  text-align: center;
 }
