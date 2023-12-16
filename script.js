@@ -54,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
       statusElement.innerText = `Player ${winner} wins!`;
       statusElement.classList.add('div--status');
       boardElement.classList.add('div--status--winner');
+      
+      let audio = new Audio('winner.wav');
+      audio.play();
 
     } else {
       statusElement.innerText = `Next player: ${isXNext ? 'X' : 'O'}`;
