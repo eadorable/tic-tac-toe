@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const statusElement = document.getElementById('status');
   const boardElement = document.getElementById('board');
+
   let board = Array(9).fill(null);
   let isXNext = true;
 
@@ -49,7 +50,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Display the status
     const winner = calculateWinner(board);
-    statusElement.innerText = winner ? `Winner: ${winner}` : `Next player: ${isXNext ? 'X' : 'O'}`;
+    if (winner) {
+      statusElement.innerText = `Player ${winner} wins!`;
+      statusElement.classList.add('div--status');
+      boardElement.classList.add('div--status--winner');
+
+    } else {
+      statusElement.innerText = `Next player: ${isXNext ? 'X' : 'O'}`;
+    }
+
   };
 
   // Initial render

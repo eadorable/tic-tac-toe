@@ -5,7 +5,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
+}
+
+.button--winner{
+  background-color: green;
+  color: #f0f0f0;
 }
 
 body{
@@ -40,5 +44,19 @@ h1 {
 }
 
 .div--text{
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 5px;
+}
+
+.div--status{
+  background-color: green;
+  color: #f0f0f0;
+}
+
+.div--status--winner{
+  background-color: green;
+  color: #f0f0f0;
 }
