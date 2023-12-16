@@ -51,16 +51,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Display the status
     const winner = calculateWinner(board);
     if (winner) {
+      const audio = new Audio('winner.wav');
+      audio.addEventListener('canplaythrough', () => {
+        audio.play();
+      });
+
       statusElement.innerText = `Player ${winner} wins!`;
       statusElement.classList.add('div--status');
       boardElement.classList.add('div--status--winner');
-      
-      let audio = new Audio('winner.wav');
-      audio.play();
-
     } else {
+      const audio2 = new Audio('tap.wav');
+      audio2.addEventListener('canplaythrough', () => {
+        audio2.play();
+      });
+
       statusElement.innerText = `Next player: ${isXNext ? 'X' : 'O'}`;
     }
+
 
   };
 
