@@ -5,6 +5,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .button--winner{
@@ -59,4 +60,22 @@ h1 {
 .div--status--winner{
   background-color: green;
   color: #f0f0f0;
+}
+
+.div--board--reset{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#btn--reset{
+  background-color: red;
+  color: #f0f0f0;
+  height: 50px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+
 }

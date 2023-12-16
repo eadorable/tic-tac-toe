@@ -24,12 +24,17 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // Function to handle button click
-  const handleButtonClick = (index) => {
-    if (board[index] || calculateWinner(board)) {
-      return;
+  function handleButtonClick(index) {
+    // if (board[index] || calculateWinner(board)) {
+    //   return;
+    // }
+
+    if (isXNext) {
+      board[index] = 'X';
+    } else {
+      board[index] = 'O';
     }
 
-    board[index] = isXNext ? 'X' : 'O';
     isXNext = !isXNext;
 
     render();
@@ -65,7 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
         audio2.play();
       });
 
-      statusElement.innerText = `Next player: ${isXNext ? 'X' : 'O'}`;
+      if (isXNext) {
+        statusElement.innerText = 'Next player: X';
+      } else {
+        statusElement.innerText = 'Next player: O';
+      }
+
     }
 
 
@@ -73,4 +83,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initial render
   render();
+
+  // Reset the game board
+  const resetElement = document.getElementById('btn--reset');
+  resetElement.addEventListener('click', () => {
+    boardElement.innerHTML = '';
+    location.reload(); // Reload the page
+  });
+
 });
