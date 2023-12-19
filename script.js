@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to handle button click
   function handleButtonClick(index) {
-    // if (board[index] || calculateWinner(board)) {
-    //   return;
-    // }
+    if (board[index] || calculateWinner(board)) {
+      return;
+    }
 
     if (isXNext) {
       board[index] = 'X';
