@@ -87,8 +87,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // Reset the game board
   const resetElement = document.getElementById('btn--reset');
   resetElement.addEventListener('click', () => {
-    boardElement.innerHTML = '';
-    location.reload(); // Reload the page
+
+      // Clear the board and reset game state
+    board = Array(9).fill(null);
+    isXNext = true;
+
+    statusElement.innerHTML = '';
+    statusElement.classList.remove('div--status');
+    boardElement.classList.remove('div--status--winner');
+    render();
   });
 
 });
